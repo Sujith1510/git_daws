@@ -1,5 +1,5 @@
 hungry=input("are you hungry")
 if hungry=="yes":
-    print("eat omlet and drink water")
+    print("eat omlet/boiled eggs and drink water")
 else:
     print("go to sleep")
