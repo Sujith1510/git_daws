@@ -1,5 +1,9 @@
 hungry=input("are you hungry")
 if hungry=="yes":
-    print("eat samosa and drink water")
+<<<<<<< HEAD
+    print("eat samosa/kachori and drink water")
+=======
+    print("eat omlet/boiled eggs and drink water")
+>>>>>>> new-feature-branch
 else:
-    print("got to work")
+    print("go to sleep")
