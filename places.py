@@ -1,4 +1,4 @@
-place=("enter the country name:")
+place=input("enter the country name: ")
 if(place=="india"):
     print("Tiger")
 elif(place=="australia"):
