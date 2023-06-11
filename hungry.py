@@ -1,4 +1,4 @@
-hungry=input("are you hungry")
+hungry=input("Are you hungry? ")
 if hungry=="yes":
     print("eat samosa")
 elif hungry=="no":
