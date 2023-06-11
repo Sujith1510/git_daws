@@ -1,7 +1,7 @@
 hungry=input("Are you hungry? ")
 if hungry=="yes":
-    print("eat samosa")
+    print("eat noodles")
 elif hungry=="no":
-    print("go to sleep")
+    print("Drink water and go to sleep")
 else:
     print("enter yes or no")
