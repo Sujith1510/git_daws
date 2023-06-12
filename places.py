@@ -5,3 +5,5 @@ elif(place=="australia"):
     print("Kangaroo")
 else:
     print("enter world test championship finals nations")
+
+
