@@ -1,2 +1,6 @@
 name : dev
+<<<<<<< HEAD
 port:41758
+=======
+ip: ipv4
+>>>>>>> main
