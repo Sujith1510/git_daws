@@ -8,3 +8,5 @@ if [ $USERID -ne 0 ]
 then
    echo "please use root access for installation..."
 fi
+
+dnf list installed mysql
