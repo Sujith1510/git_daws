@@ -1,6 +1,6 @@
 #!/bin/bash
 
-LOGFOLDER="\var\log\shell-scripts"
+LOGFOLDER="/var/log/shell-scripts"
 SCRIPT_NAME=$(echo $0 | cut -d . -f1)
 TIMESTAMP=$(date +%Y-%m-%d-%H-%M-%S)
 LOG_FILE="$LOGFOLDER/$SCRIPT_NAME-$TIMESTAMP.log"
