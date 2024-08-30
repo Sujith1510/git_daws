@@ -37,6 +37,7 @@ USAGE(){
 
 CHECK_ROOT 
 
+echo "Started script execution + $(date)"
 if [ $# -eq 0 ]
 then
    USAGE
