@@ -9,4 +9,4 @@ then
    echo "please use root access for installation..."
 fi
 
-dnf list installed mysql
+dnf install mysql -y
