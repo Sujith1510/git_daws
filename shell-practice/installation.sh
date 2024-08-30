@@ -16,7 +16,12 @@ CHECK_ROOT(){
 }
 
 VALIDATE(){
-  echo  "exit status: $1"
+  if [ $1 -ne 0 ]
+  then 
+     echo -e "$2 installation is $R FAILED..$N"
+  else
+     echo -e "$2 installation is $G SUCCESSFULL..$N"
+  fi
 }
 
 CHECK_ROOT 
@@ -24,12 +29,11 @@ CHECK_ROOT
 for package in $@
 do 
   dnf list installed $package
-  VALIDATE $?
   if [ $? -ne 0 ]
   then 
      echo -e "$Y $package is not installed going to install $N"
-    #  dnf install $package -y
-    #  VALIDATE $?
+     dnf install $package -y
+     VALIDATE $? $package
   else
      echo -e "$G $package is installed already...$N"
   fi
