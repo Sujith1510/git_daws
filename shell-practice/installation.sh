@@ -13,6 +13,8 @@ then
 fi
 
 dnf list installed mysql
+exit 1
+
 if [ $? -ne 0 ]
 then
    echo -e "$Y msql is not installed $N"
