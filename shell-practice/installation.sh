@@ -1,6 +1,7 @@
 #!/bin/bash
 
 R="\e[31m"
+G="\e[32m"
 Y="\e[33m"
 N="\e[0m"
 
@@ -12,11 +13,13 @@ then
    exit 1
 fi
 
-dnf list installed mysql
-exit 1
-
-if [ $? -ne 0 ]
-then
-   echo -e "$Y msql is not installed $N"
-   exit 1
-fi
+for $package in $@
+do 
+  dnf list installed $package
+  if [ $? -ne 0 ]
+  then 
+     echo -e "$Y $package is not installed on the server...$N"
+  else
+     echo -e "$G $package is installed already...$N"
+  fi
+done
