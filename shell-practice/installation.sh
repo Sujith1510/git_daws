@@ -38,6 +38,7 @@ USAGE(){
 CHECK_ROOT 
 
 echo "Started script execution at: $(date)" | tee -a $LOG_FILE 
+
 if [ $# -eq 0 ]
 then
    USAGE
