@@ -1,3 +1,3 @@
 #!/bin/bash
 
-cat textfile | wc -w
+echo textfile | wc -w
