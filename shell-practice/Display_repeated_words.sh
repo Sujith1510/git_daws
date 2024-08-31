@@ -18,9 +18,9 @@ fi
 tr '[:upper:]' '[:lower:]' < "$file" |      # Convert to lowercase
 tr -d '[:punct:]' |                         # Remove punctuation
 tr ' ' '\n' |                               # Split words into new lines
-grep -v '^$'                              # Remove empty lines
-# sort |                                      # Sort words
-# uniq -c |                                   # Count occurrences
+grep -v '^$' |                              # Remove empty lines
+sort |                                      # Sort words
+uniq -c                                    # Count occurrences
 # sort -nr |                                  # Sort by count (numerically, in reverse order)
 # head -n 5                                   # Display the top 5
 
