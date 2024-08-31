@@ -1,9 +1,8 @@
 #!/bin/bash
 
-f=$1
+filename=$1
 
-i=1
 while read line
 do
-    echo "$line"
-done < $f
+    echo "$line" | wc -w
+done < $filename
