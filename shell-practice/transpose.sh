@@ -22,9 +22,11 @@ awk '
         if (NR == 1) {
             # For the first row, create the array
             transposed[i] = $i
+            echo "$i"
         } else {
             # For subsequent rows, append values with space
             transposed[i] = transposed[i] " " $i
+            echo "$transposed[i]"
         }
     }
 }
