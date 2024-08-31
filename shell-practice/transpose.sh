@@ -31,8 +31,7 @@ awk '
 }
 END {
     # Print the transposed matrix row by row
-    # for (i = 1; i <= length(transposed); i++) {
-    #     print transposed[i]
-    # }
-    echo "${transposed[@]}"
+    for (i = 1; i <= length(transposed); i++) {
+        print transposed[i]
+    }
 }' "$file"
