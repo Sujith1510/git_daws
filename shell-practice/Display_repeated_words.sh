@@ -1,6 +1,6 @@
 #!/bin/bash
 
-f = textfile.txt
+f=textfile.txt
 
 
 i=1
