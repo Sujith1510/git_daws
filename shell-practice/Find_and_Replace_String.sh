@@ -25,12 +25,18 @@ fi
 # Find all .txt files in the specified directory and its subdirectories
 find "$DIRECTORY" -type f -name "*.txt" | while read -r F; do
   # Use sed to replace the search string with the replacement string in each file
-  sed -i "s/$FIND_STRING/$REPLACE_STRING/g" "$F"
+  if [ $FIND_STRING -eq $REPLACE_STRING ]
+  then     
+    echo -e "Replaced the string in the files $R FAILED $N $Y Please enter the existing string $N"
+  else
+    sed -i "s/$FIND_STRING/$REPLACE_STRING/g" "$F"
+    echo -e "Replaced the string in the files $R FAILED $N $Y Please enter the existing string $N"
+  fi
 done
 
-if [ $? -eq 0 ]
-then
-   echo -e "Replaced the string in the files $G SUCCESS $N"
-else
-   echo -e "Replaced the string in the files $R FAILED $N $Y Please enter the existing string $N"
-fi
+# if [ $? -eq 0 ]
+# then
+#    echo -e "Replaced the string in the files $G SUCCESS $N"
+# else
+#    echo -e "Replaced the string in the files $R FAILED $N $Y Please enter the existing string $N"
+# fi
