@@ -17,7 +17,7 @@ USAGE(){
   exit 1
 }
 
-if [$# -eq 0]
+if [ $# -eq 0 ]
 then
   USAGE
 fi
@@ -28,7 +28,7 @@ find "$DIRECTORY" -type f -name "*.txt" | while read -r F; do
   sed -i "s/$FIND_STRING/$REPLACE_STRING/g" "$F"
 done
 
-if [$? -eq 0]
+if [ $? -eq 0 ]
 then
    echo -e "Replaced the string in the files $G SUCCESS $N"
 else
