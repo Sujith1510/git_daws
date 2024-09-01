@@ -17,17 +17,18 @@ USAGE(){
   exit 1
 }
 
-if[$# -eq 0]
-{
+if [$# -eq 0]
+then
   USAGE
-}
+fi
+
 # Find all .txt files in the specified directory and its subdirectories
 find "$DIRECTORY" -type f -name "*.txt" | while read -r F; do
   # Use sed to replace the search string with the replacement string in each file
   sed -i "s/$FIND_STRING/$REPLACE_STRING/g" "$F"
 done
 
-if[$? -eq 0]
+if [$? -eq 0]
 then
    echo -e "Replaced the string in the files $G SUCCESS $N"
 else
