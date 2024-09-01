@@ -1,5 +1,0 @@
-stop the server
-back up the previous version
-remove the existing version
-download the new version
-start the server
